@@ -1,0 +1,17 @@
+속성 (Property)
+class User {
+    val age: Int
+    val name: String
+
+    constructor(age: Int, name: String) {
+        this.age = age
+        this.name = name
+    }
+}
+-> 프로퍼티 : age, name
+user.age / user.name -> 코틀린이 getter를 호출해준다.
+user.age = 20       -> 코틀린이 setter를 호출해준다.
+
+1. getter/setter
+- getter : 클래스의 속성에 접근할 때
+- setter : 클래스의 속성의 값을 설정할 때
