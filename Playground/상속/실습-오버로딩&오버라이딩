@@ -1,0 +1,33 @@
+Overloading, Overriding
+- 슈퍼클래스가 사용하고 있는 멤버와 동일한 이름의 멤버를 만들 수 없다
+    - 오버라이딩을 통해서 슈퍼클래스가 가지고 있는 함수를 재정의 할 수 있다.
+    - 재정의를 할 때는 함수 맨 앞에 override 키워드를 적어준다.
+- 재정의
+    - 재선언과 동일하다
+    - 이전에 정의한 것을 번복하고, 새롭게 정의한다
+        - 번복 -> 이전에 정의한 것은 작동 X
+    - 이전 것을 덮어쓴다
+
+open class Warrior1(var name: String, var power: Int, var type: String) { // 부모클래스, 슈퍼클래스
+    fun attack() {
+        println("복잡한 코드 + 공격")
+    }
+}
+
+class DefenseWarrior1(name: String, power: Int): Warrior1(name, power, "고블린") {
+    fun defense() {
+        println("방어")
+    }
+
+    override fun attack() {
+        // override로 슈퍼 클래스가 가지고 있는 함수를 재정의 할 수 있다
+        println("공격")
+    }
+}
+
+Overloading
+- 동일한 이름의 함수를 복수 개 만드는 것을 불가능하다
+    -> 코틀린은 동일한 이름의 복수 개 함수중에 어떤 것을 사용자가 사용하길 원하는 지 알 수 없기 때문
+    -> 어떤 걸 사용자가 사용하기 원했는 지 앙ㄹ 수 있다면 동일한 이름의 함수를 여러 개 만들 수 있다
+        - 함수가 받는 인자의 개수가 다른 경우
+        - 함수가 리턴하는 타입이 다른 경우
