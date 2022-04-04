@@ -1,0 +1,23 @@
+// 형변환 Type Casting
+Type
+- 자료형, 클래스
+
+Casting
+- 다른 자료형으로 변환
+- 형변환이 무조건 가능한 게 아니다
+- 기본 자료형간의 형변환은 암기하는 것이 아니라 필요한 순간에 확인하고 진행
+
+Class
+- Class도 자료형이다
+- 상속 클래스간의 자료형
+    - 슈퍼클래스 (Warrior) 서브클래스 (DefenseWarrior) 서브클래스 (HardAttackWarrior)
+    - DefenseWarrior is Warrior (true)
+    - HardAttackWarrior is Warrior (true)
+    - Warrior is DefenseWarrior (false)
+    - Warrior is HardAttackWarrior (false)
+    - Warrior A
+    - DefenseWarrior A + B
+    - HardAttackWarrior A + C
+
+// 자료형 검사 + 캐스팅
+// is , as 키워드 -> 자료형을 검사하고 캐스팅을 한다
